@@ -1,0 +1,148 @@
+/*
+######################################################
+## By Munaf Aqeel Mahdi - Iraq
+- Find me on : 
+- http://www.facebook.com/munafaqeelmahdi.official
+- http://www.facebook.com/munaf.aqeel.m
+- http://www.github.com/munafaqeelmahdi
+- http://www.instagram.com/munaf_ewd
+- http://www.twitter.com/munaf_aqeel_m
+
+######################################################
+*/
+html{
+	background-color: rgba(243, 243, 243, 0.4) !important;
+	min-height: 100% !important;
+}
+#main{
+    background: #fff;
+    max-width: 230px;
+    width: auto;
+    margin: auto;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 13%;
+    position: relative;
+    box-shadow: 0px 6px 15px rgba(156, 39, 176, 0.09);
+}
+.topDiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right,#3F51B5,#9C27B0,#FF5722);
+    border-radius: 10px 10px 0px 0px;
+}
+.addBtnDiv{
+	position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.addBtn{
+	border: 0;
+    padding: 9px 10px;
+    border-radius: 100%;
+    color: #fff;
+    background: linear-gradient(to right,#3F51B5,#9C27B0);
+    cursor: pointer;
+    height: 35px;
+    font-size: 16px;
+    width: 35px;
+    box-shadow: 3px 6px 15px rgba(102, 102, 102, 0.37);
+    outline: none;
+}
+#input{
+    width: 100%;
+    border: none;
+    background: white;
+    padding: 6px 8px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 15px rgba(103, 58, 183, 0.1);
+    outline: none;
+    color: #8c8c8c;
+}
+#input::placeholder{
+	color: #bfbfbf;
+}
+ul{
+	margin-top: 10px;
+}
+/* The container */
+.container {
+	color: #8c8c8c;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius:100%;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 0px rgba(63, 81, 181, 0.22);
+    transition: box-shadow 0.3s;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+   /* TODO.. */
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background: linear-gradient(to right,#2196F3,#00BCD4);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 7.5px;
+    top: 3px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* =======================[Mobile responsive design]==========================*/
+@media only screen and (max-width:400px) {
+#main{
+	max-width: none !important;
+	margin-top: 0 !important;
+}
+}

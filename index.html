@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TO-DO List using vueJs - Munaf Aqeel Mahdi</title>
+	<script src="https://unpkg.com/vue@2.4.2/dist/vue.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="main">
+	<div class="topDiv"></div>
+	<input type="text" id="input" v-model="newName" placeholder="Add new task" @keyup.enter="addName" />
+	<div class="addBtnDiv">
+		<button class="addBtn" @click="addName"><span class="fa fa-plus"></span></button>
+	</div>
+
+	<ul>
+		<li v-for="name in names">
+		<label class="container">{{name}}
+		  <input type="checkbox">
+		  <span class="checkmark"></span>
+		</label>
+		</li>
+	</ul>
+
+	</div>
+	
+	<script type="text/javascript">
+	var app = new Vue({
+		el : '#main',
+		data:{
+			newName : null,
+			names : ['Listening to a music',
+					 'watching a movie',
+					 'Learning VueJs',
+					 'Build vueJs app']
+		},
+		methods:{
+			addName(){
+				var input = document.getElementById("input").value;
+				if (input != '') {
+					this.names.push(this.newName);
+					this.newName = '';
+				}
+			}
+		},
+	})
+	</script>
+</body>
+</html>
